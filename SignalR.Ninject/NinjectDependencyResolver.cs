@@ -1,15 +1,26 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-using Ninject;
-using SignalR.Infrastructure;
-
-namespace SignalR.Ninject 
+﻿namespace SignalR.Ninject 
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Microsoft.AspNet.SignalR;
+    using global::Ninject;
+
+    /// <summary>
+    /// The ninject dependency resolver.
+    /// </summary>
     public class NinjectDependencyResolver : DefaultDependencyResolver
     {
-        private readonly IKernel _kernel;
+        /// <summary>
+        /// The kernel.
+        /// </summary>
+        private readonly IKernel kernel;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="NinjectDependencyResolver"/> class.
+        /// </summary>
+        /// <param name="kernel">The kernel. </param>
+        /// <exception cref="ArgumentNullException">kernel should not null </exception>
         public NinjectDependencyResolver(IKernel kernel) 
         {
             if (kernel == null)
@@ -17,17 +28,27 @@ namespace SignalR.Ninject
                 throw new ArgumentNullException("kernel");
             }
 
-            _kernel = kernel;
+            this.kernel = kernel;
         }
 
+        /// <summary>
+        /// The get service.
+        /// </summary>
+        /// <param name="serviceType">The service type. </param>
+        /// <returns>The service <see cref="object"/>. </returns>
         public override object GetService(Type serviceType) 
         {
-            return _kernel.TryGet(serviceType) ?? base.GetService(serviceType);
+            return this.kernel.TryGet(serviceType) ?? base.GetService(serviceType);
         }
 
+        /// <summary>
+        /// The get services.
+        /// </summary>
+        /// <param name="serviceType">The service type. </param>
+        /// <returns>The service <see cref="IEnumerable"/>. </returns>
         public override IEnumerable<object> GetServices(Type serviceType) 
         {
-            return _kernel.GetAll(serviceType).Concat(base.GetServices(serviceType));
+            return this.kernel.GetAll(serviceType).Concat(base.GetServices(serviceType));
         }
     }
 }
