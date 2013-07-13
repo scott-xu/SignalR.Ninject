@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR.Ninject", "SignalR.Ninject\SignalR.Ninject.csproj", "{0E1E9481-B7AA-4F1B-B863-43A39F4902BB}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.AspNet.SignalR.Ninject", "Microsoft.AspNet.SignalR.Ninject\Microsoft.AspNet.SignalR.Ninject.csproj", "{0E1E9481-B7AA-4F1B-B863-43A39F4902BB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2614180D-F27D-4FDB-88A0-C3354F07BE98}"
 	ProjectSection(SolutionItems) = preProject

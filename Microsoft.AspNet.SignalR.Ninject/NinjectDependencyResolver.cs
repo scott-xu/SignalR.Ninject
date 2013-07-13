@@ -1,4 +1,4 @@
-﻿namespace SignalR.Ninject 
+﻿namespace Microsoft.AspNet.SignalR.Ninject
 {
     using System;
     using System.Collections.Generic;
@@ -7,7 +7,7 @@
     using global::Ninject;
 
     /// <summary>
-    /// The ninject dependency resolver.
+    /// The Ninject dependency resolver.
     /// </summary>
     public class NinjectDependencyResolver : DefaultDependencyResolver
     {

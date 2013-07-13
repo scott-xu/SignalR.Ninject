@@ -8,8 +8,8 @@
     <ProjectGuid>{0E1E9481-B7AA-4F1B-B863-43A39F4902BB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SignalR.Ninject</RootNamespace>
-    <AssemblyName>SignalR.Ninject</AssemblyName>
+    <RootNamespace>Microsoft.AspNet.SignalR.Ninject</RootNamespace>
+    <AssemblyName>Microsoft.AspNet.SignalR.Ninject</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
